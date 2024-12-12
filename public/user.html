@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5dc; /* Beige clair */
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cercle dans le coin supérieur gauche */
+        .circle-top-left {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: #d9a679; /* Marron clair */
+            border-radius: 50%;
+        }
+
+        /* Cercle dans le coin inférieur droit */
+        .circle-bottom-right {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: #d9a679; /* Marron clair */
+            border-radius: 50%;
+        }
+
+        h1 {
+            color: #5a3e36; /* Marron foncé */
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #5a3e36; /* Marron foncé */
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #482f29;
+            color: #fff;
+        }
+
+        .btn-danger {
+            background-color: #a94442; /* Rouge */
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background-color: #842029;
+            color: #fff;
+        }
+
+        form {
+            background-color: #fff; /* Blanc pour le formulaire */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cercle supérieur gauche -->
+    <div class="circle-top-left"></div>
+
+    <!-- Cercle inférieur droit -->
+    <div class="circle-bottom-right"></div>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Mon Profil</h1>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-danger mb-3" onclick="logout()">Déconnexion</button>
+        </div>
+        <form id="form-update-profile" class="bg-light p-4 rounded shadow">
+            <h2 class="text-center mb-4">Modifier mes informations</h2>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+            </div>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Mettre à jour</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function logout() {
+            alert("Déconnexion réussie !");
+            window.location.href = "connexion.html";
+        }
+    </script>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
